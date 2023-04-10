@@ -1,0 +1,469 @@
+/* pour les flèches fonctionnelles */
+@keyframes tonext {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: 100%;
+    }
+    98% {
+      left: 100%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+  @keyframes tostart {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: -300%;
+    }
+    98% {
+      left: -300%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+  @keyframes snap {
+    96% {
+      scroll-snap-align: center;
+    }
+    97% {
+      scroll-snap-align: none;
+    }
+    99% {
+      scroll-snap-align: none;
+    }
+    100% {
+      scroll-snap-align: center;
+    }
+  }
+ 
+  * {
+    box-sizing: border-box;
+    scrollbar-color: transparent transparent;    /* thumb and track color  */
+  scrollbar-width: 0px;
+  }
+  
+  *::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+  }
+  
+  * {
+    -ms-overflow-style: none;
+  }
+  
+  ol, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .carousel {
+    /* position: relative; */
+    padding-top: 10%;
+    /* margin-top: 40px; */
+    height: 200px;
+    width: 100%;
+  }
+  
+  .carousel__viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    counter-reset: item;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+  
+ 
+  .carousel__slide1{
+    position: relative;
+    display: flex;
+    /* flex: 0 0 100%; */
+    width: 100%;
+    counter-increment: item;
+  }
+  .carousel__slide2{
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    counter-increment: item;
+  }
+  .carousel__slide3{
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    counter-increment: item;
+  }
+ 
+  .carousel__slide:before {
+    content: counter(item);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-40%,70px);
+    color: #fff;
+    font-size: 2rem;
+  }
+  
+  .carousel__snapper {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    scroll-snap-align: center;
+  }
+  
+  @media (hover: hover) {
+    .carousel__snapper {
+      animation-name: tonext, snap;
+      animation-timing-function: ease;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+    .carousel__slide:last-child .carousel__snapper {
+      animation-name: tostart, snap;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .carousel__snapper {
+      animation-name: none;
+    }
+  }
+  
+  .carousel:hover .carousel__snapper,
+  .carousel:focus-within .carousel__snapper {
+    animation-name: none;
+  }
+ 
+  .carousel__navigation-list,
+  .carousel__navigation-item {
+    display: inline-block;
+  }
+ 
+  .carousel::before,
+  .carousel::after,
+  .carousel__prev,
+  .carousel__next {
+    position: absolute;
+    top: 0;
+    width: 5rem;
+    height: 4rem;
+    font-size: 0;
+    outline: 0;
+  }
+  
+  .carousel::before,
+  .carousel__prev {
+    left: 0.1rem;
+  } 
+  
+  .carousel::after,
+  .carousel__next {
+    right: 0.1rem;
+  }
+  
+  .carousel::before,
+  .carousel::after {
+    content: '';
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    background-size: 1.5rem 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: black;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    text-align: center;
+    pointer-events: none;
+  }
+  
+  .carousel::before {
+    background-image: url("../image/1223874-200.png");
+  }
+  
+  .carousel::after {
+    background-image: url("../image/VlHnQcDcHW73dIIIsMDtudK8T38.svg");
+  }
+  
+  /* ELEMENTS DU CAROUSSEL */
+ 
+  .car1{
+    width: 140px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid #00809d;
+    margin-left: 78px;
+  }
+ .car1 .imj6{
+    border-radius: 50px;
+    padding-left: 5px;
+  
+ }
+ .car1 a .titr1{
+    position: absolute;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    color:  rgb(94, 94, 94);
+    font-family: Roboto-regular;
+    padding-top: 7px;
+ 
+ }
+ .car1 a .gra1{
+    margin-left: 5px;
+    position: absolute;
+    margin-top: 20px;
+    color:  rgb(75, 75, 75);
+    font-family: Roboto-regular;
+    padding-top: 3px;
+ 
+ }
+ .car2{
+   width: 150px;
+   height: 50px;
+   border-radius: 50px;
+   border: 1px solid #00809d;
+ }
+.car2 .imj7{
+   border-radius: 50%;
+   padding-left: 5px;
+   padding-top: 5px; 
+}
+.car2 a .gra2{
+   margin-left: 10px;
+   position: absolute;
+   color:  rgb(75, 75, 75);
+   font-family: Roboto-regular;
+   padding-top: 7px;
+}
+.car2 a .titr2{
+   margin-top: 20px;
+   position: absolute;
+   margin-left: 10px;
+   color:  rgb(94, 94, 94);
+   font-family: Roboto-regular;
+   padding-top: 3px;
+}
+
+.car3{
+   width: 150px;
+   height: 50px;
+   border-radius: 50px;
+   border: 1px solid #00809d;
+ }
+.car3 .imj8{
+   border-radius: 50%;
+   padding-left: 5px;
+   padding-top: 5px;  
+}
+.car3 a .titr3{
+   position: absolute;
+   margin-bottom: 10px;
+   margin-left: 5px;
+   color:  rgb(94, 94, 94);
+   font-family: Roboto-regular;
+   padding-top: 7px;
+}
+.car3 a .gra3{
+   margin-left: 5px;
+   position: absolute;
+   margin-top: 20px;
+   color:  rgb(75, 75, 75);
+   font-family: Roboto-regular;
+   padding-top: 3px;
+}
+
+
+.car4{
+   width: 150px;
+   height: 50px;
+   border-radius: 50px;
+   border: 1px solid #00809d;
+ }
+.car4 .imj9{
+   border-radius: 50%;
+   padding-left: 5px;
+   padding-top: 5px;  
+}
+.car4 a .titr4{
+   position: absolute;
+   margin-bottom: 10px;
+   margin-left: 5px;
+   color:  rgb(94, 94, 94);
+   font-family: Roboto-regular;
+   padding-top: 7px;
+}
+.car4 a .gra4{
+   margin-left: 5px;
+   position: absolute;
+   margin-top: 20px;
+   color:  rgb(75, 75, 75);
+   font-family: Roboto-regular;
+   padding-top: 3px;
+}
+
+.car5{
+   width: 150px;
+   height: 50px;
+   border-radius: 50px;
+   border: 1px solid #00809d;
+ }
+.car5 .imj10{
+   border-radius: 50%;
+   padding-left: 5px;
+   padding-top: 5px;  
+}
+.car5 a .titr5{
+   position: absolute;
+   margin-bottom: 10px;
+   margin-left: 5px;
+   color:  rgb(94, 94, 94);
+   font-family: Roboto-regular;
+   padding-top: 7px;
+}
+.car5 a .gra5{
+   margin-left: 5px;
+   position: absolute;
+   margin-top: 20px;
+   color:  rgb(75, 75, 75);
+   font-family: Roboto-regular;
+   padding-top: 3px;
+}
+
+ .car6{
+   width: 150px;
+   height: 50px;
+   border-radius: 50px;
+   border: 1px solid #00809d;
+} 
+.car6 .imj11{
+   border-radius: 50%;
+   padding-left: 5px;
+   padding-top: 5px;  
+}
+.car6 a .titr6{
+   position: absolute;
+   margin-bottom: 10px;
+   margin-left: 5px;
+   color:  rgb(94, 94, 94);
+   font-family: Roboto-regular;
+   padding-top: 7px;
+}
+.car6 a .gra6{
+   margin-left: 5px;
+   position: absolute;
+   margin-top: 20px;
+   color:  rgb(75, 75, 75);
+   font-family: Roboto-regular;
+   padding-top: 3px;
+}
+
+.car7{
+   width: 150px;
+   height: 50px;
+   border-radius: 50px;
+   border: 1px solid #00809d;
+}
+.car7 .imj12{
+   border-radius: 50%;
+   padding-left: 5px;
+   padding-top: 5px;  
+}
+.car7 a .titr7{
+   position: absolute;
+   margin-bottom: 10px;
+   margin-left: 5px;
+   color:  rgb(94, 94, 94);
+   font-family: Roboto-regular;
+   padding-top: 7px;
+}
+.car7 a .gra7{
+   margin-left: 5px;
+   position: absolute;
+   margin-top: 20px;
+   color:  rgb(75, 75, 75);
+   font-family: Roboto-regular;
+   padding-top: 3px;
+}
+
+.car8{
+   width: 150px;
+   height: 50px;
+   border-radius: 50px;
+   border: 1px solid #00809d;
+}
+.car8 .imj13{
+   border-radius: 50%;
+   padding-left: 5px;
+   padding-top: 5px;  
+}
+.car8 a .titr8{
+   position: absolute;
+   margin-bottom: 10px;
+   margin-left: 5px;
+   color:  rgb(94, 94, 94);
+   font-family: Roboto-regular;
+   padding-top: 7px;
+}
+.car8 a .gra8{
+   margin-left: 5px;
+   position: absolute;
+   margin-top: 20px;
+   color:  rgb(75, 75, 75);
+   font-family: Roboto-regular;
+   padding-top: 3px;
+   
+}
+
+.car9{
+   width: 100px;
+   height: 50px;
+   border-radius: 50px;
+   border: 1px solid #00809d;
+ }
+.car9 .imj14{
+   border-radius: 50%;
+   padding-left: 5px;
+   padding-top: 5px;  
+}
+.car9 a .titr9{
+   position: absolute;
+   margin-bottom: 10px;
+   margin-left: 5px;
+   color:  rgb(94, 94, 94);
+   font-family: Roboto-regular;
+   padding-top: 7px;
+}
+.car9 a .gra9{
+   margin-left: 5px;
+   position: absolute;
+   margin-top: 20px;
+   color:  rgb(75, 75, 75); 
+   font-family: Roboto-regular;
+   padding-top: 3px;
+}
+#bloc7{
+   display: inline-flex;
+   justify-content: space-around;
+   width: 100%;
+   margin-top: 10px;
+}

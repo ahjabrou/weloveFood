@@ -1,0 +1,64 @@
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+    max-height: 190px;
+    margin-bottom: 60px;
+    margin-left: 100;
+   /* color: rgb(151, 134, 134); */
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+
+  }
+  
+  div.gallery img {
+    width: 180px;
+     max-height: 100px;
+    
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+   .rond{
+    border: 1px solid grey;
+    border-radius: 30px;
+    width: 150px;
+    height: 50px;
+    margin: 15px;
+    
+  }  
+  #mini{
+    display: flex;
+    
+  }
+  .flotter{
+    float: left;
+  }
+   .trait{
+    border: 0.30px solid grey;
+   }
+   div a{
+    text-decoration: none;
+    color: grey;
+
+  } 
+  .men{
+    margin-right: 50px;
+  } 
+  .max{
+    border-radius: 50px;
+    margin-bottom: 40px;
+    width: 700px;
+    height: 60px;
+  }
+  .search{
+    margin-left: 100px;
+  }
+    
+  
+   

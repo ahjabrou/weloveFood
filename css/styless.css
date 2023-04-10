@@ -1,0 +1,78 @@
+.imj{
+    background: url("../images/img_plus.png") no-repeat;
+    background-size: cover;
+    width: 90px;
+    height: 90px;
+    border: none;
+}
+.ron1{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border-color: rgb(40, 87, 168);
+    background-color: rgb(16, 121, 241);
+    color: white;
+
+}
+.ron2{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: white;
+    border: none;
+    background-color: rgb(229, 33, 33);
+}
+.fa{
+    margin-left: 4px;
+}
+.bloc1{
+    width: 500px;
+    height: 300px;
+    float: right;
+    margin-top: -250px;
+}
+.for1{
+    margin-top: 90px;
+    margin-left: 320px;
+}
+.imj3{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    margin-top: -10px;
+    margin-right: 20px;
+}
+.bloc2{
+    width: 60px;
+    height: 60px;
+    padding-right: 65px;
+    padding-bottom: 35px;
+    background-color: rgb(27, 27, 228);
+    border-radius: 50%;
+    border: none;
+    margin-top: -100px;
+    margin-left: 10px;
+}
+.met1{
+    width: 830px;
+    height: 80px;
+    border-radius: 10px;
+    border-color: rgb(27, 27, 228);
+    font-weight: 700;
+    font-style: bold;
+    padding-left: 15px;
+}
+.bloc6{
+    margin-left: 90px;
+}
+.para1{
+    color: #3551EC;
+}
+.para2{
+    color: #000000;
+    margin-top: 15px;
+}
+.para3{
+    color: #596CE5;
+    margin-top: 90px;
+}
